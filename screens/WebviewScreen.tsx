@@ -20,12 +20,7 @@ export default function WebviewScreen() {
 
   let source: WebViewSource = {html: initialHtml};
   if (url) {
-    if (!/^https:\/\/appiumpro.com$/i.test(url)) {
-      Alert.alert('Sorry, you are not allowed to visit that url');
-      setUrl(null);
-    } else {
-      source = {uri: url};
-    }
+    source = {uri: url};
   }
 
   return (
